@@ -3,7 +3,7 @@ project(orb_slam3_ros_wrapper)
 
 # Change this to your installation of ORB-SLAM3. Default is ~/
 set(ORB_SLAM3_DIR
-   $ENV{HOME}/Packages/ORB_SLAM3
+   root/ORB_SLAM/ORB_SLAM3
 )
 
 set(CMAKE_BUILD_TYPE "Release")
@@ -67,13 +67,13 @@ target_link_libraries(${PROJECT_NAME}_mono
 
 
 # stereo node
-add_executable (${PROJECT_NAME}_stereo
-   src/stereo_node.cc
-   src/common.cc
-)
-target_link_libraries(${PROJECT_NAME}_stereo
-   ${LIBS}
-)
+# add_executable (${PROJECT_NAME}_stereo
+#    src/stereo_node.cc
+#    src/common.cc
+# )
+# target_link_libraries(${PROJECT_NAME}_stereo
+#    ${LIBS}
+# )
 
 
 # mono-inertial node
@@ -87,13 +87,13 @@ target_link_libraries(${PROJECT_NAME}_mono_inertial
 
 
 # stereo-inertial node
-add_executable (${PROJECT_NAME}_stereo_inertial
-   src/stereo_inertial_node.cc
-   src/common.cc
-)
-target_link_libraries(${PROJECT_NAME}_stereo_inertial
-   ${LIBS}
-)
+# add_executable (${PROJECT_NAME}_stereo_inertial
+#    src/stereo_inertial_node.cc
+#    src/common.cc
+# )
+# target_link_libraries(${PROJECT_NAME}_stereo_inertial
+#    ${LIBS}
+# )
 
 
 # RGB-D node
